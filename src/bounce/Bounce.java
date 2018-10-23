@@ -12,7 +12,6 @@ public class Bounce {
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             JFrame frame = new BounceFrame();
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setVisible(true);
         });
     }
@@ -23,6 +22,9 @@ class BounceFrame extends JFrame {
     private static final int DELAY = 3;
     private BallComponent comp;
 
+    /**
+     * 弹球窗体的构造方法
+     */
     BounceFrame() {
         setTitle("Bounce");
         comp = new BallComponent();
